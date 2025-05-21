@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: zafrar09/mlops_ci_cd:latest     # Imagen remota en DockerHub
+          image: zafrar09/mlops_ci_cd:v2 # latest     Imagen remota en DockerHub
           ports:
             - containerPort: 8000
 ---
