@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-dashboard
+  labels:
+    grafana_dashboard: "1"
+data:
+  api_dashboard.json: |
+    {
+      "dashboard": {
+        "id": null,
+        "uid": "predict-requests",
+        "title": "API Predict Metrics",
+        "timezone": "browser",
+        "panels": [
+          {
+            "type": "graph",
+            "title": "Total predict requests",
+            "targets": [
+              {
+                "expr": "predict_requests_total",
+                "refId": "A"
+              }
+            ],
+            "gridPos": {
+              "h": 8,
+              "w": 24,
+              "x": 0,
+              "y": 0
+            },
+            "datasource": "Prometheus"
+          }
+        ],
+        "schemaVersion": 36,
+        "version": 1
+      },
+      "overwrite": true
+    }
+
+
