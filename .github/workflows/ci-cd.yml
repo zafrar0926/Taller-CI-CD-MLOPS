@@ -35,7 +35,8 @@ jobs:
 
       - name: Construir y hacer push de imagen
         run: |
-          docker build -t zafrar09/mlops_ci_cd:latest ./api
+          docker build -t zafrar09/mlops_ci_cd:latest -t zafrar09/mlops_ci_cd:test-ci ./api
           docker push zafrar09/mlops_ci_cd:latest
+          docker push zafrar09/mlops_ci_cd:test-ci
 
 
