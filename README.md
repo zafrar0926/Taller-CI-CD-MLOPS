@@ -138,12 +138,32 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 ---
 
+## 🚀 Proyecto Desplegado
+
+El proyecto desplegado envia a traves de **Loadtester** solicitudes cada segundo al API. 
+
+La interfaz de FastAPI se puede ve asi:
+![alt text](image.png)
+
+Una vez desplegado el proyecto, se pueden monitorear en **Prometheus** las metricas creadas, en este caso *predict_requests_total*:
+![alt text](image-1.png)
+
+O directamente desde **Grafana** con el dashboard desplegado automaticamente:
+![alt text](image-2.png)
+
+El proyecto completo puede monitorearse desde **Argo** que sincroniza automaticamente con el repositorio: *https://github.com/zafrar0926/Taller-CI-CD-MLOPS*
+
+![alt text](image-3.png)
+
+
 ## 🛌 Recomendaciones Finales
 
 - Evitar `latest` en producción: usar tags versionados
 - Validar cada push observando los logs en GitHub Actions
 - Agregar pruebas unitarias al pipeline CI si se desea extender
-
+- Para facilitar el despliegue se incluye el archivo *recreate_all.sh*
+    - Para su ejecucion solo requiere:
+    **chmod +x recreate_all.sh && ./recreate_all.sh**
 ---
 
-✅ **Estado: Proyecto completamente funcional y validado paso a paso.**
+✅ **Desarrollado por: Santiago Zafra Rodriguez, Edwin A. Caro y Andres F. Matallana.**
