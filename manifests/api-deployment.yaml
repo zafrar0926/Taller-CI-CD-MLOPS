@@ -13,11 +13,10 @@ spec:
         app: api
     spec:
       containers:
-      - name: api
-        image: api-fastapi:latest
-        imagePullPolicy: Never
-        ports:
-        - containerPort: 8000
+        - name: api
+          image: zafrar09/mlops_ci_cd:latest     # Imagen remota en DockerHub
+          ports:
+            - containerPort: 8000
 ---
 apiVersion: v1
 kind: Service
