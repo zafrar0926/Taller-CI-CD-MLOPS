@@ -2,7 +2,7 @@ import requests
 import time
 import random
 
-url = "http://api-fastapi:8000/predict"
+url = "http://api:8000/predict"
 
 while True:
     sample = [[random.uniform(4.0, 8.0) for _ in range(4)]]
