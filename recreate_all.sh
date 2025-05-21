@@ -54,9 +54,11 @@ echo "🌐 6. Lanzando port-forwards (en segundo plano)..."
 kubectl port-forward service/api 8000:8000 &
 kubectl port-forward service/grafana 3000:3000 &
 kubectl port-forward svc/argocd-server -n argocd 8080:443 &
+kubectl port-forward svc/prometheus 9090:9090 &
 
 echo "✅ Proyecto reiniciado completamente."
 echo "➡️  API:     http://localhost:8000/docs"
 echo "➡️  Grafana: http://localhost:3000"
 echo "➡️  ArgoCD:  http://localhost:8080"
+echo "➡️  Prometheus:  http://localhost:9090"
 
