@@ -38,3 +38,4 @@ jobs:
           docker build -t zafrar09/mlops_ci_cd:latest ./api
           docker push zafrar09/mlops_ci_cd:latest
 
+
