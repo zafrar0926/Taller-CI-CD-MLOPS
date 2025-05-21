@@ -143,7 +143,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 El proyecto desplegado envia a traves de **Loadtester** solicitudes cada segundo al API. 
 
-La interfaz de FastAPI se puede ve asi:
+La interfaz de FastAPI se puede ver asi:
 ![alt text](image.png)
 
 Una vez desplegado el proyecto, se pueden monitorear en **Prometheus** las metricas creadas, en este caso *predict_requests_total*:
@@ -161,7 +161,6 @@ El proyecto completo puede monitorearse desde **Argo** que sincroniza automatica
 
 - Evitar `latest` en producción: usar tags versionados
 - Validar cada push observando los logs en GitHub Actions
-- Agregar pruebas unitarias al pipeline CI si se desea extender
 - Para facilitar el despliegue se incluye el archivo *recreate_all.sh*
     - Para su ejecucion solo requiere:
     **chmod +x recreate_all.sh && ./recreate_all.sh**
