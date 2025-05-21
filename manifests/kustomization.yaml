@@ -5,3 +5,5 @@ resources:
   - grafana-deployment.yaml
   - grafana-config.yaml
   - grafana-dashboard.yaml 
+  - grafana-dashboard-provider.yaml
+
