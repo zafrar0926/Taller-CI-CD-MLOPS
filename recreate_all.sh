@@ -44,11 +44,13 @@ else
   echo "✅ Argo CD ya está instalado."
 fi
 
+echo "📌 5.6 Aplicando app.yaml de Argo CD..."
+kubectl apply -f manifests/argo-cd/app.yaml
+
 echo "⏳ Esperando a que los pods estén listos..."
 kubectl wait --for=condition=ready pod --all --timeout=90s
 
 echo "🌐 6. Lanzando port-forwards (en segundo plano)..."
-
 kubectl port-forward service/api 8000:8000 &
 kubectl port-forward service/grafana 3000:3000 &
 kubectl port-forward svc/argocd-server -n argocd 8080:443 &
