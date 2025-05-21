@@ -37,6 +37,7 @@ TALLER CI CD MLOPS/
 │   ├── grafana-config.yaml         # ConfigMap para datasources
 │   ├── grafana-dashboard.yaml      # ConfigMap para dashboard con métricas
 │   ├── grafana-dashboard.json      # Contenido JSON del dashboard
+│   ├── grafana-dashboard-provider.yaml     # Indica a Grafana dónde cargar automáticamente los dashboards desde archivos JSON
 │   ├── grafana-deployment.yaml     # Deployment y Service de Grafana
 │   ├── prometheus-deployment.yaml  # Deployment y Service de Prometheus
 │   ├── prometheus.yaml             # ConfigMap para Prometheus (targets)
